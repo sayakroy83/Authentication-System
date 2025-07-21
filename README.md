@@ -5,6 +5,8 @@ A full-stack authentication system using MongoDB, Express.js, React.js, and Node
 ## Features
 - Register & Login
 - Protected Routes
+- Verify account using otp
+- Create new password using otp
 - MongoDB Integration
 
 ## How to Run
