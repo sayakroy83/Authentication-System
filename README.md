@@ -9,7 +9,7 @@ A full-stack authentication system using MongoDB, Express.js, React.js, and Node
 
 ## How to Run
 ### Backend
-  cd servre
+  cd server
   npm i
   npm run server
 
