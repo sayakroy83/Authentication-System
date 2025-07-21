@@ -2,7 +2,7 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import userModel from '../models/userModel.js';
 import transporter from '../config/nodemailer.js';
-import { EMAIL_VERIFY_TEMPLATE, PASSWORD_RESET_TEMPLATE } from '../config/emailTemplates.js';
+import { EMAIL_VERIFY_TEMPLATE, PASSWORD_RESET_TEMPLATE, WELCOME_EMAIL_TEMPLATE } from '../config/emailTemplates.js';
 
 export const register = async(req, res)=>{
     const {name, email, password} = req.body;
@@ -39,7 +39,8 @@ export const register = async(req, res)=>{
             from: process.env.SENDER_EMAIL,
             to: email,
             subject: 'Welcome to this site',
-            text: `Welcome to the site. your account has been created with email id: ${email}`
+            //text: `Welcome to the site. your account has been created with email id: ${email}`
+            html: WELCOME_EMAIL_TEMPLATE.replace('{email}', user.email)
         }
 
         await transporter.sendMail(mailOptions);

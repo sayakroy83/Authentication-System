@@ -216,3 +216,44 @@ export const PASSWORD_RESET_TEMPLATE = `
 </body>
 </html>`
 
+export const WELCOME_EMAIL_TEMPLATE = `
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome Email</title>
+  </head>
+  <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; margin: auto; background-color: #ffffff;">
+      <tr>
+        <td align="center" style="padding: 20px 0; background-color: #4CAF50; color: white;">
+          <h1>Welcome to <span style="color: #ffe600;">MERN</span> Website</h1>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 30px; text-align: center;">
+          <p style="font-size: 18px; color: #333;">
+            Hello there! 👋
+          </p>
+          <p style="font-size: 16px; color: #555;">
+            Your account has been successfully created with the email:
+          </p>
+          <p style="font-size: 20px; font-weight: bold; color: #4CAF50;">
+            {email}
+          </p>
+          <p style="font-size: 16px; color: #777;">
+            We're glad to have you on board. Get ready to explore amazing features built with the MERN stack!
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" style="padding: 20px; background-color: #f1f1f1; color: #777;">
+          <p style="font-size: 14px;">&copy; 2025 MERN Project. All rights reserved.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+`
+
