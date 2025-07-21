@@ -5,18 +5,20 @@ A full-stack authentication system using MongoDB, Express.js, React.js, and Node
 ## Features
 - Register & Login
 - Protected Routes
+- Verify account using otp
+- Create new password using otp
 - MongoDB Integration
 
 ## How to Run
 ### Backend
-  cd server
-  npm i
-  npm run server
+ - cd server
+ - npm i
+ - npm run server
 
 
 
 ### Frontend
- cd client
- cd vite-project
- npm i
- npm run dev
+- cd client
+- cd vite-project
+- npm i
+- npm run dev
