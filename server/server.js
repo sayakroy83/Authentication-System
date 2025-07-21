@@ -22,7 +22,7 @@ app.get('/', (req, res)=> {res.send("hello world newyork")});
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
 
-mongoose.connect("mongodb://localhost:27017/Authentication")
+mongoose.connect(process.env.MONGO_URI)
 .then(()=> {
     console.log("MongoDB Connected!!!");
     app.listen(port, ()=> {console.log(`server is running on ${port}`)});
