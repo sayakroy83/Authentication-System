@@ -22,12 +22,14 @@ app.get('/', (req, res)=> {res.send("Hello World from server!")});
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
 
-mongoose.connect(process.env.MONGO_URI)
-.then(()=> {
-    console.log("MongoDB Connected!!!");
-    app.listen(port, ()=> {console.log(`server is running on ${port}`)});
-})
-.catch((err)=> 
-    console.log("MongoDB connection failed", err));
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB Connected"))
+  .catch((err) => console.log("MongoDB Connection Failed:", err));
+
+  if(process.env.NODE_ENV !== "production") {
+    const port = process.env.PORT || 4000;
+    app.listen(port, () => console.log(`Server running on port ${port}`));
+  }
 
 
